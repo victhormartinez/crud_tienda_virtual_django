@@ -1,19 +1,24 @@
 <form enctype="multipart/form-data" method="post">
     {% csrf_token %}
+    <div class="row">
     {% for campo in formulario %}
         
-        <div class="mb-3">
+        
+            <div class="col-12 col-lg-6 my-1">
+
             <label for="" class="form-label">{{ campo.label }}:</label>
-            <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}" id="" aria-describedby="helpId" placeholder="{{ campo.label }}"
+            <input type="{{ campo.field.widget.input_type }}" class="form-control" name="{{ campo.name }}" id="" aria-describedby="helpId"
                 value="{{ campo.value | default:'' }}"
             >
             
         </div>
+    
 
     {% endfor %}
+</div>
 
-    <input name="" id="" class="btn btn-success" type="submit" value="Guardar información">
-    <a name="" id="" class="btn btn-info" href="{% url 'llantas' %}" role="button">Cancelar</a>
+    <input name="" id="" class="btn btn-success mt-2" type="submit" value="GUARDAR INFORMACION" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+    <a name="" id="" class="btn btn-info mt-2" href="{% url 'llantas' %}" role="button" style="background: #535c5f !important; color: #dddad8!important; font-weight: bold; border-radius: 50px;">CANCELAR</a>
 
     
 </form>

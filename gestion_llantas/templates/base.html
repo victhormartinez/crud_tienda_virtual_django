@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
@@ -16,15 +17,38 @@
 
 <body>
 
+  <div class="container my-2">
+    <div class="row">
+      <div class="col-12">
+        
 
-    <nav class="navbar navbar-expand navbar-light bg-light">
-        <div class="nav navbar-nav">
-            <a class="nav-item nav-link active" href="{% url 'inicio' %}" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
-            <a class="nav-item nav-link" href="{% url 'llantas' %}">Llantas</a>
-            <a class="nav-item nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+        <div class="row align-items-md-stretch">
+          <div class="col-md-12 text-center">
+              <div
+                  class="h-100 p-5 text-white border rounded-3" style="background: #73939c; color: #dddad8 !important; letter-spacing: .5px;">
+                  <h2 style="text-transform: uppercase;">Tienda virtual - gestion llantas</h2>
+                 
+              </div>
+          </div>
         </div>
-    </nav>
 
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-2">
+    <div class="row">
+      <div class="col-12">
+        <ul class="nav nav-pills nav-justified">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold;">INICIO</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
 
     <div class="container">
         <div class="row">

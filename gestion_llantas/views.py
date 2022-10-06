@@ -5,7 +5,8 @@ from .forms import LlantaForm
 # Create your views here.
 
 def inicio(request):
-    return render(request, 'paginas/inicio.html')
+    llantas = llanta.objects.all()
+    return render(request, 'llantas/index.html', {'llantas': llantas})
 
 def nosotros(request):
     return render(request, 'paginas/nosotros.html')
