@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %} Agrear nueva llanta {% endblock %}
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header">
+            Crear una llanta
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos de la llanta</h4>
+            {% include 'llantas/form.html' %}
+        </div>
+    </div>
+{% endblock %}

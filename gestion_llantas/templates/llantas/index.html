@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo %} Llantas {% endblock %}
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header">
+            <a name="" id="" class="btn btn-primary" href="{% url 'crear_llanta' %}" role="button">Agregar nueva llanta</a>
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Llantas</h4>
+            
+            <div class="table-responsive">
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Fabricante</th>
+                            <th scope="col">Indice de Carga</th>
+                            <th scope="col">Indice de Velocidad</th>
+                            <th scope="col">Lonas</th>
+                            <th scope="col">Ancho</th>
+                            <th scope="col">Perfil</th>
+                            <th scope="col">Rin</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for llanta in llantas %}
+                        <tr class="">
+                            <td scope="row">{{llanta.id}}</td>
+                            <td>{{llanta.fabricante}}</td>
+                            <td>{{llanta.indiceCarga}}</td>
+                            <td>{{llanta.indiceVelocidad}}</td>
+                            <td>{{llanta.lonas}}</td>
+                            <td>{{llanta.ancho}}</td>
+                            <td>{{llanta.perfil}}</td>
+                            <td>{{llanta.rin}}</td>
+                            <td>
+                                <a name="" id="" class="btn btn-info" href="{% url 'editar_llanta' llanta.id %}" role="button">Editar llanta</a>
+                                |
+                                <a name="" id="" class="btn btn-danger" href="{% url 'borrar_llanta' llanta.id %}" role="button">Borrar llanta</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+
+        </div>
+    </div>
+{% endblock %}

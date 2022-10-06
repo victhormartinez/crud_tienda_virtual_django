@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %} Editar llanta {% endblock %}
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header">
+            Editar llanta
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos de la llanta</h4>
+            {% include 'llantas/form.html' %}
+        </div>
+        <div class="card-footer text-muted">
+            Footer
+        </div>
+    </div>
+{% endblock %}
