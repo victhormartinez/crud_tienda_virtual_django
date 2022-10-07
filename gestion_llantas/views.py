@@ -34,3 +34,24 @@ def borrar_llanta(request, id):
     data = llanta.objects.get(id=id)
     data.delete()
     return redirect('llantas')
+
+def actividad_dos(request):
+    return render(request, 'actividad_dos/actividad_dos.html')
+
+def actividad_tres(request):
+    return render(request, 'actividad_tres/actividad_tres.html')
+
+def punto_dos(request):
+    resultado=''
+    punto = request.POST.get('punto')
+    if punto=='1':
+        nombre = request.POST.get('nombre')
+        resultado = "Hola " + nombre
+    if punto=='2':
+        primero_numero = int(request.POST.get('primer_numero'))
+        segundo_numero = int(request.POST.get('segundo_numero'))
+        resultado = primero_numero*segundo_numero
+    return render(request, 'actividad_dos/resultado.html', {'resultado': resultado,'punto':punto})
+
+def punto_tres(request):
+    return render(request, 'actividad_tres/resultado.html', {'resultado': resultado,'punto':punto})

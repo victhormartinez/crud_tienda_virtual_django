@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% block titulo %} Actividad dos {% endblock %}
+
+{% block contenido %}
+    <div class="card">
+        <div class="card-header" style="font-weight: bold; color: #73939c; letter-spacing: .2px;">
+            TERCERA ACTIVIDAD
+        </div>
+        <div class="card-body">
+
+            <div class="row m-3 p-4 bg-light shadow-sm border border-1">
+                <div class="col-12">
+                    1. Diseñar un programa que imprima todos los números pares entre dos números que ingrese el usuario. Valide que los valores ingresados sean numéricos.
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 my-1">
+                                    <input type="text" class="form-control" name="nombre" id="" aria-describedby="helpId"
+                                        value="" placeholder="Nombre"
+                                    >
+                                    <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="1"
+                                    >
+                                </div>
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row m-3 p-4 bg-light shadow-sm  border border-1">
+                <div class="col-12">
+                    2. Diseñar un programa que reciba un número n e imprima los primeros n números triangulares junto con su índice. Los números triangulares se obtienen mediante la suma de los números naturales desde 1 hasta n. Es decir, si se piden los primeros 5 números triangulares, el programa debe imprimir:
+ 
+                    1 --> 1
+                    2 --> 3
+                    3 --> 6
+                    4 --> 10
+                    5 --> 15
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="primer_numero" id="" aria-describedby="helpId"
+                                        value="" placeholder="Primer numero"
+                                    >
+                                </div>
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="segundo_numero" id="" aria-describedby="helpId"
+                                        value="" placeholder="Segundo numero"
+                                    >
+                                </div>
+                                <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="2"
+                                    >
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row m-3 p-4 bg-light shadow-sm  border border-1">
+                <div class="col-12">
+                    3. Desarrolle una versión mediante el diseño de una función, de lo solicitado en el punto 2.
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="base" id="" aria-describedby="helpId"
+                                        value="" placeholder="Base"
+                                    >
+                                </div>
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="altura" id="" aria-describedby="helpId"
+                                        value="" placeholder="Altura"
+                                    >
+                                </div>
+                                <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="3"
+                                    >
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row m-3 p-4 bg-light shadow-sm  border border-1">
+                <div class="col-12">
+                    4. Diseñar un programa que mediante una función, calcule el costo de las llamadas realizadas en un teléfono móvil y la duración en segundos, recibiendo como entrada la tarifa por segundo, el numero de comunicaciones realizadas y la duración de cada llamada expresada en horas, minutos y segundos.
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="base" id="" aria-describedby="helpId"
+                                        value="" placeholder="Base"
+                                    >
+                                </div>
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="altura" id="" aria-describedby="helpId"
+                                        value="" placeholder="Altura"
+                                    >
+                                </div>
+                                <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="4"
+                                    >
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row m-3 p-4 bg-light shadow-sm  border border-1">
+                <div class="col-12">
+                    5. Diseñar un programa que mediante funciones, convierte una cantidad ingresada en pesos colombianos a dólares americanos, euros y bitcoins.
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="base" id="" aria-describedby="helpId"
+                                        value="" placeholder="Base"
+                                    >
+                                </div>
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="altura" id="" aria-describedby="helpId"
+                                        value="" placeholder="Altura"
+                                    >
+                                </div>
+                                <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="5"
+                                    >
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+            <div class="row m-3 p-4 bg-light shadow-sm  border border-1">
+                <div class="col-12">
+                    6. Diseñar un programa que, mediante una función, organice de forma ascendente, tres valores numéricos ingresados por el usuario.
+                </div>
+                <div class="col-12 py-3">
+                    <form action="{% url 'punto_dos' %}" enctype="multipart/form-data" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="base" id="" aria-describedby="helpId"
+                                        value="" placeholder="Base"
+                                    >
+                                </div>
+                                <div class="col-12 col-lg-6 my-1">
+                                    <input type="number" class="form-control" name="altura" id="" aria-describedby="helpId"
+                                        value="" placeholder="Altura"
+                                    >
+                                </div>
+                                <input type="hidden" class="form-control" name="punto" id="" aria-describedby="helpId"
+                                        value="6"
+                                    >
+                        </div>
+                        <input name="" id="" class="btn btn-success mt-3" type="submit" value="PROCESAR" style="background: #dddad8 !important; color: #73939c!important; font-weight: bold; border-radius: 50px;">
+                    </form>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
